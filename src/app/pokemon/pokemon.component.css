@@ -1,0 +1,41 @@
+.container{
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+table {
+  min-width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.mat-header-cell {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  font-size: 24px;
+}
+td.mat-cell{
+  font-size: 20px;
+}
+
+.buttons {
+  margin-top: 40px;
+}
+.buttons button{
+  width: 120px;
+  height: 44px;
+  margin-right: 40px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+mat-label{
+  font-size: 20px;
+}
+mat-form-field input{
+  height: 28px;
+  font-size: 20px;
+}
