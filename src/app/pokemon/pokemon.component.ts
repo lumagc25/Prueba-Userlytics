@@ -15,11 +15,12 @@ export class PokemonComponent implements OnInit {
   data: any[] = [];
   dataSource = new MatTableDataSource<any>(this.data);
   index : number;
-
+  elementsPerPage : number;
   //@ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
 
   constructor(private pokemonService : PokemonService) {
     this.index = 0;
+    this.elementsPerPage = 10;
   }
 
   ngOnInit(): void {
@@ -56,12 +57,12 @@ export class PokemonComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
   nextList(){
-    this.index = this.index+10;
+    this.index = this.index+this.elementsPerPage;
     console.log(this.index);
     this.getPokemons(this.index)
   }
   prevList(){
-    this.index = this.index-10;
+    this.index = this.index-this.elementsPerPage;
     console.log(this.index);
     this.getPokemons(this.index)
   }
